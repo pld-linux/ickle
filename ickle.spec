@@ -3,7 +3,7 @@ Summary(pl):	Klient ICQ2000 przeznaczony dla Gtk--
 Name:		ickle
 Version:	0.3.1
 Release:	3
-License:	GPL
+License:	GPL v2
 Group:		Applications/Communications
 Source0:	http://unc.dl.sourceforge.net/sourceforge/ickle/%{name}-%{version}.tar.gz
 URL:		http://ickle.sourceforge.net/
@@ -34,32 +34,6 @@ ickle to projekt open-source implementuj±cy protokó³ ICQ2000. Celem
 jest dostarczenie wszelkich mo¿liwo¶ci ICQ2000 dla nie-windowsowych
 platform.
 
-%package devel
-Summary:	Header files and develpment documentation for libicq2000
-Summary(pl):	Pliki nag³ówkowe i dokumetacja do libicq2000
-Group:		Development/Libraries
-Requires:	%{name} = %{version}
-Requires:	libsigc++-devel
-Requires:	libstdc++-devel
-
-%description devel
-Header files and develpment documentation for libicq2000.
-
-%description devel -l pl
-Pliki nag³ówkowe i dokumetacja do libicq2000.
-
-%package static
-Summary:	Static libicq2000 library
-Summary(pl):	Biblioteka statyczna libicq2000
-Group:		Development/Libraries
-Requires:	%{name}-devel = %{version}
-
-%description static
-Static libicq2000 library.
-
-%description static -l pl
-Biblioteka statyczna libicq2000.
-
 %prep
 %setup -q
 
@@ -70,10 +44,14 @@ Biblioteka statyczna libicq2000.
 
 %install
 rm -rf $RPM_BUILD_ROOT
+install -d $RPM_BUILD_ROOT%{_mandir}/man1
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT \
 	desktopdir=%{_applnkdir}/Network/Communications
+
+# why it is not installed by the command above ?
+install ickle/ickle_applet.1 $RPM_BUILD_ROOT%{_mandir}/man1
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -85,17 +63,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog NEWS README TODO scripts/*.pl
 %attr(755,root,root) %{_bindir}/*
-%attr(755,root,root) %{_libdir}/lib*.so.*.*
 %{_sysconfdir}/CORBA/servers/*
 %{_applnkdir}/Network/Communications/*
 %{_datadir}/%{name}
-
-%files devel
-%defattr(644,root,root,755)
-%{_includedir}/%{name}
-%attr(755,root,root) %{_libdir}/lib*.so
-%attr(755,root,root) %{_libdir}/lib*.la
-
-%files static
-%defattr(644,root,root,755)
-%{_libdir}/lib*.a
+%{_mandir}/man1/*
