@@ -2,7 +2,7 @@ Summary:	A Gtk-- ICQ2000 Client
 Summary(pl):	Klient ICQ2000 przeznaczony dla Gtk--
 Name:		ickle
 Version:	0.3.1
-Release:	2
+Release:	3
 License:	GPL
 Group:		Applications/Communications
 Source0:	http://unc.dl.sourceforge.net/sourceforge/ickle/%{name}-%{version}.tar.gz
@@ -14,6 +14,7 @@ BuildRequires:	gettext-devel
 BuildRequires:	gnome-libs-devel
 BuildRequires:	gtk+-devel >= 1.2.0
 BuildRequires:	gtkmm-devel >= 1.2.0
+BuildRequires:	libicq2000-devel
 BuildRequires:	libstdc++-devel
 BuildRequires:	libsigc++-devel >= 1.0.0
 BuildRequires:	libtool
