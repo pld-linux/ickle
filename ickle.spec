@@ -5,8 +5,6 @@ Version:	0.2.0
 Release:	1
 License:	GPL
 Group:		Applications/Communications
-Group(de):	Applikationen/Kommunikation
-Group(pl):	Aplikacje/Komunikacja
 Source0:	http://prdownloads.sourceforge.net/ickle/%{name}-%{version}.tar.gz
 URL:		http://ickle.sourceforge.net/
 BuildRequires:	autoconf
@@ -39,13 +37,6 @@ platform.
 Summary:	Header files and develpment documentation for libicq2000
 Summary(pl):	Pliki nagЁСwkowe i dokumetacja do libicq2000
 Group:		Development/Libraries
-Group(de):	Entwicklung/Libraries
-Group(es):	Desarrollo/Bibliotecas
-Group(fr):	Development/Librairies
-Group(pl):	Programowanie/Biblioteki
-Group(pt_BR):	Desenvolvimento/Bibliotecas
-Group(ru):	Разработка/Библиотеки
-Group(uk):	Розробка/Б╕бл╕отеки
 Requires:	%{name} = %{version}
 Requires:	libsigc++-devel
 Requires:	libstdc++-devel
@@ -60,13 +51,6 @@ Pliki nagЁСwkowe i dokumetacja do libicq2000.
 Summary:	Static libicq2000 library
 Summary(pl):	Biblioteka statyczna libicq2000
 Group:		Development/Libraries
-Group(de):	Entwicklung/Libraries
-Group(es):	Desarrollo/Bibliotecas
-Group(fr):	Development/Librairies
-Group(pl):	Programowanie/Biblioteki
-Group(pt_BR):	Desenvolvimento/Bibliotecas
-Group(ru):	Разработка/Библиотеки
-Group(uk):	Розробка/Б╕бл╕отеки
 Requires:	%{name}-devel = %{version}
 
 %description static
