@@ -6,6 +6,7 @@ Release:	3
 License:	GPL v2
 Group:		Applications/Communications
 Source0:	http://unc.dl.sourceforge.net/sourceforge/ickle/%{name}-%{version}.tar.gz
+# Source0-md5:	c1cb37b0264db9610cf7e8e53255db99
 URL:		http://ickle.sourceforge.net/
 BuildRequires:	ORBit-devel
 BuildRequires:	autoconf
