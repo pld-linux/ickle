@@ -11,12 +11,12 @@ Source0:	http://prdownloads.sourceforge.net/ickle/%{name}-%{version}.tar.gz
 URL:		http://ickle.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	libtool
 BuildRequires:	gettext-devel
+BuildRequires:	gtk+-devel >= 1.2.0
+BuildRequires:	gtkmm-devel >= 1.2.0
 BuildRequires:	libstdc++-devel
 BuildRequires:	libsigc++-devel >= 1.0.0
-BuildRequires:	gtkmm-devel >= 1.2.0
-BuildRequires:	gtk+-devel >= 1.2.0
+BuildRequires:	libtool
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
@@ -105,7 +105,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc *.gz scripts/*.gz
 %attr(755,root,root) %{_bindir}/*
-%attr(755,root,root) %{_libdir}/lib*.so.*
+%attr(755,root,root) %{_libdir}/lib*.so.*.*
 
 %files devel
 %defattr(644,root,root,755)
