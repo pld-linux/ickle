@@ -1,7 +1,7 @@
 Summary:	A Gtk-- ICQ2000 Client
 Summary(fr):	Klient ICQ2000 przeznaczony dla Gtk--
 Name:		ickle
-Version:	0.1.2
+Version:	0.2.0
 Release:	1
 License:	GPL
 Group:		Applications/Communications
@@ -16,11 +16,14 @@ BuildRequires:	gtk+-devel >= 1.2.0
 BuildRequires:	gtkmm-devel >= 1.2.0
 BuildRequires:	libstdc++-devel
 BuildRequires:	libsigc++-devel >= 1.0.0
+BuildRequires:	ORBit-devel
+BuildRequires:	gnome-libs-devel
 BuildRequires:	libtool
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
 %define		_mandir		%{_prefix}/man
+%define         _sysconfdir     /etc/X11
 
 %description
 ickle is an open-source project implementing the ICQ2000 protocol. The
@@ -76,22 +79,16 @@ Biblioteka statyczna libicq2000.
 %setup -q
 
 %build
-rm -f missing
-gettextize --copy --force
-libtoolize --copy --force
-aclocal
-autoconf
-automake -a -c
-CPPFLAGS="$(sigc-config --cflags)"; export CPPFLAGS
-%configure
-
+%configure2_13 \
+	--with-gnome
 %{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
-	DESTDIR=$RPM_BUILD_ROOT
+	DESTDIR=$RPM_BUILD_ROOT \
+	desktopdir=%{_applnkdir}/Network/Communications
 
 gzip -9nf AUTHORS ChangeLog NEWS README TODO scripts/*.pl
 
@@ -106,6 +103,9 @@ rm -rf $RPM_BUILD_ROOT
 %doc *.gz scripts/*.gz
 %attr(755,root,root) %{_bindir}/*
 %attr(755,root,root) %{_libdir}/lib*.so.*.*
+%{_sysconfdir}/CORBA/servers/*
+%{_applnkdir}/Network/Communications/*
+%{_datadir}/%{name}
 
 %files devel
 %defattr(644,root,root,755)
