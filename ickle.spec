@@ -1,7 +1,7 @@
 Summary:	A Gtk-- ICQ2000 Client
 Summary(fr):	Klient ICQ2000 przeznaczony dla Gtk--
 Name:		ickle
-Version:	0.1.1
+Version:	0.1.2
 Release:	1
 License:	GPL
 Group:		Applications/Communications
