@@ -44,7 +44,7 @@ Requires:	libstdc++-devel
 %description devel
 Header files and develpment documentation for libicq2000.
 
-%description -l pl devel
+%description devel -l pl
 Pliki nag³ówkowe i dokumetacja do libicq2000.
 
 %package static
@@ -56,7 +56,7 @@ Requires:	%{name}-devel = %{version}
 %description static
 Static libicq2000 library.
 
-%description -l pl static
+%description static -l pl
 Biblioteka statyczna libicq2000.
 
 %prep
