@@ -10,7 +10,7 @@ Release:	1
 License:	GPL v2
 Group:		Applications/Communications
 # Source0-md5:	c59acbc24ac90cfc7fd21c49038481ed
-Source0:	http://dl.sourceforge.net/sourceforge/%{name}/%{name}-%{version}.tar.gz
+Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}.tar.gz
 URL:		http://ickle.sourceforge.net/
 BuildRequires:	ORBit-devel
 BuildRequires:	autoconf
@@ -24,7 +24,6 @@ BuildRequires:	libstdc++-devel
 BuildRequires:	libsigc++1-devel >= 1.0.0
 BuildRequires:	libtool
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-
 
 %description
 ickle is an open-source project implementing the ICQ2000 protocol. The
