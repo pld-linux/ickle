@@ -16,7 +16,7 @@ BuildRequires:	gtk+-devel >= 1.2.0
 BuildRequires:	gtkmm-devel >= 1.2.0
 BuildRequires:	libicq2000-devel
 BuildRequires:	libstdc++-devel
-BuildRequires:	libsigc++-devel >= 1.0.0
+BuildRequires:	libsigc++1-devel >= 1.0.0
 BuildRequires:	libtool
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
