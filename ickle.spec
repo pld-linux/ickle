@@ -13,7 +13,7 @@ BuildRequires:	automake
 BuildRequires:	gettext-devel
 BuildRequires:	gnome-libs-devel
 BuildRequires:	gtk+-devel >= 1.2.0
-BuildRequires:	gtkmm-devel >= 1.2.0
+BuildRequires:	gtkmm1-devel >= 1.2.0
 BuildRequires:	libicq2000-devel
 BuildRequires:	libstdc++-devel
 BuildRequires:	libsigc++1-devel >= 1.0.0
