@@ -3,7 +3,7 @@
 #	ickle.desktop
 
 Summary:	A Gtk-- ICQ2000 Client
-Summary(pl):	Klient ICQ2000 przeznaczony dla Gtk--
+Summary(pl.UTF-8):   Klient ICQ2000 przeznaczony dla Gtk--
 Name:		ickle
 Version:	0.3.2
 Release:	1
@@ -30,9 +30,9 @@ ickle is an open-source project implementing the ICQ2000 protocol. The
 aim is to bring the most useful features of ICQ2000 to non-windows
 platforms.
 
-%description -l pl
-ickle to projekt open-source implementuj±cy protokÛ≥ ICQ2000. Celem
-jest dostarczenie wszelkich moøliwo∂ci ICQ2000 dla nie-windowsowych
+%description -l pl.UTF-8
+ickle to projekt open-source implementujƒÖcy protok√≥≈Ç ICQ2000. Celem
+jest dostarczenie wszelkich mo≈ºliwo≈õci ICQ2000 dla nie-windowsowych
 platform.
 
 %prep
