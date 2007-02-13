@@ -3,7 +3,7 @@
 #	ickle.desktop
 
 Summary:	A Gtk-- ICQ2000 Client
-Summary(pl.UTF-8):   Klient ICQ2000 przeznaczony dla Gtk--
+Summary(pl.UTF-8):	Klient ICQ2000 przeznaczony dla Gtk--
 Name:		ickle
 Version:	0.3.2
 Release:	1
