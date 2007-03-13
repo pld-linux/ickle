@@ -9,8 +9,8 @@ Version:	0.3.2
 Release:	1
 License:	GPL v2
 Group:		Applications/Communications
-# Source0-md5:	c59acbc24ac90cfc7fd21c49038481ed
 Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}.tar.gz
+# Source0-md5:	c59acbc24ac90cfc7fd21c49038481ed
 URL:		http://ickle.sourceforge.net/
 BuildRequires:	ORBit-devel
 BuildRequires:	autoconf
