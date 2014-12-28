@@ -15,7 +15,7 @@ URL:		http://ickle.sourceforge.net/
 BuildRequires:	ORBit-devel
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	gettext-devel
+BuildRequires:	gettext-tools
 BuildRequires:	gnome-libs-devel
 BuildRequires:	gtk+-devel >= 1.2.0
 BuildRequires:	gtkmm1-devel >= 1.2.0
